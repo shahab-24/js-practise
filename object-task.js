@@ -63,8 +63,8 @@ let myObject = {
   const key = Object.keys(myObject)
 
   for ( const key in myObject){
-    console.log(key);
-    // console.log(key, ':',myObject[key], typeof(key));
+    
+    console.log(key, ':',myObject[key], typeof(key));
   }
 
 
