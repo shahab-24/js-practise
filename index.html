@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Event Listener</title>
+</head>
+<body>
+<div id="comment-div">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur possimus quaerat at eum culpa, labore iste quibusdam voluptatibus. Vero soluta, eveniet qui dignissimos similique eaque libero harum illum blanditiis cum perferendis aspernatur eum accusamus corporis quis dolore nam, nulla dolorem a quaerat reiciendis totam! Eligendi aliquid quam deserunt sint ut!</p>
+<p>Harum, nemo ratione libero illum eos iste saepe voluptate optio quisquam magni, incidunt voluptatum rerum itaque accusantium inventore dolore in, ea vero qui ipsum! Itaque ratione eligendi vitae, sequi minus assumenda. Optio, cupiditate ab, totam harum soluta dicta exercitationem architecto in possimus facilis laborum ipsa. Sed ea fugit quisquam odio?</p>
+<p>Similique rerum repudiandae, voluptatem reprehenderit commodi culpa iusto quae excepturi minima ea perspiciatis! Adipisci, laudantium alias asperiores ipsum deleniti perferendis aliquam necessitatibus, amet sit molestias magni iure autem quaerat laborum consequuntur dolorem sunt cum provident impedit consequatur aspernatur nesciunt? Modi distinctio tempora quisquam, totam maxime blanditiis maiores placeat numquam quia?</p>
+  
+
+</div>
+<div>
+  <textarea name="" id="comment-box" rows="5" cols="60" placeholder="Comment here">
+    
+  </textarea>
+  <button id="post-comment">Post</button>
+  
+</div>
+<script>
+  document.getElementById('post-comment').addEventListener('click', function(){
+    console.log('clicked');
+
+
+    const commentBox = document.getElementById('comment-box')
+    const textValue = commentBox.value;
+    console.log(textValue);
+
+
+    const commentDiv = document.getElementById('comment-div')
+    const p = document.createElement('p')
+    p.innerText = textValue;
+    commentDiv.appendChild(p)
+
+    commentBox.value = '';
+  })
+
+</script>
+</body>
+</html>
